@@ -4,6 +4,7 @@ import Bg from "../../../../Assets/images/bg-1.png";
 export const peopleCategorySectionStyles = makeStyles((theme) => ({
   mainContainer: {
     padding: "2rem",
+    marginBottom: "2rem",
   },
   basicText: {
     color: "#ffffff",

@@ -3,6 +3,7 @@ import { homeStyles } from "./HomeStyles";
 import Header from "./Sections/Header/Header";
 import About from "./Sections/About/About";
 import PeopleCategorySection from "./Sections/PeopleCategorySection/PeopleCategorySection";
+import ProgramPhasesSection from "./Sections/ProgramPhasesSection/ProgramPhasesSection";
 
 const Home = () => {
   const classes = homeStyles();
@@ -16,6 +17,9 @@ const Home = () => {
 
       {/* Selected People Section */}
       <PeopleCategorySection />
+
+      {/* Program Phases Section */}
+      <ProgramPhasesSection />
     </div>
   );
 };
