@@ -5,11 +5,15 @@ import About from "./Sections/About/About";
 import PeopleCategorySection from "./Sections/PeopleCategorySection/PeopleCategorySection";
 import ProgramPhasesSection from "./Sections/ProgramPhasesSection/ProgramPhasesSection";
 import LearningStacksSection from "./Sections/LearningStacksSection/LearningStacksSection";
+import Navbar from "./Sections/Navbar/Navbar";
 
 const Home = () => {
   const classes = homeStyles();
   return (
     <div className={classes.mainContainer}>
+      {/* Navbar */}
+      <Navbar />
+
       {/* Header */}
       <Header />
 

@@ -1,15 +1,20 @@
 import { makeStyles } from "@material-ui/core/styles";
+import Bg from "../../../../Assets/images/Bg-4.png";
 
 export const aboutStyles = makeStyles((theme) => ({
   mainContainer: {
-    marginTop: "-1rem",
-    backgroundColor: "#003399",
+    marginTop: "-0.5rem",
+    backgroundColor: "#F5F5F5",
     padding: "0.5rem",
-    paddingTop: "2rem",
+    paddingTop: "1rem",
+    zIndex: "100",
+    marginBottom: "1rem",
   },
   dataContainer: {
     padding: "2rem",
-    zIndex: "100",
+    background: `url(${Bg})`,
+    backgroundPosition: "center",
+    backgroundSize: "contain",
   },
   basicText: {
     color: "#ffffff",
@@ -30,7 +35,7 @@ export const aboutStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-between",
-    marginBottom: "3rem",
+    marginBottom: "1.5rem",
     [theme.breakpoints.down("sm")]: {
       marginBottom: "1.5rem",
     },
@@ -38,7 +43,7 @@ export const aboutStyles = makeStyles((theme) => ({
   underline: {
     width: "300px",
     height: "4px",
-    backgroundColor: "#d02d5a",
+    backgroundColor: "#6C1A93",
   },
   dataText: {
     fontFamily: "Fira Sans",
@@ -65,13 +70,5 @@ export const aboutStyles = makeStyles((theme) => ({
     height: "100%",
     width: "100%",
     objectFit: "contain",
-  },
-  shapeContainer: {
-    height: "8vh",
-    clipPath: "polygon(100% 0, 100% 10%, 50% 100%, 0 10%, 0 0)",
-    backgroundColor: "#003399",
-    [theme.breakpoints.down("sm")]: {
-      height: "4vh",
-    },
   },
 }));

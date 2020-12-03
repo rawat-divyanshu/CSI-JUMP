@@ -4,7 +4,7 @@ import Bg from "../../../../Assets/images/bg-1.png";
 export const learningStacksSectionStyles = makeStyles((theme) => ({
   wrapperContainer: {
     padding: "2rem 0rem 2rem 0rem",
-    backgroundImage: "linear-gradient(to right, #D02D5A, #003398)",
+    backgroundImage: "linear-gradient(to right, #A92994, #501393)",
   },
   mainContainer: {
     padding: "2rem 0rem 2rem 0rem",

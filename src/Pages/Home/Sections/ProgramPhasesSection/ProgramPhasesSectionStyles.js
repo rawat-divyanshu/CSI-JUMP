@@ -4,6 +4,7 @@ import Bg from "../../../../Assets/images/bg-1.png";
 export const programPhasesSectionStyles = makeStyles((theme) => ({
   wrapperContainer: {
     padding: "1rem 0.5rem 2rem 0.5rem",
+    marginBottom: "2rem",
   },
   mainContainer: {
     padding: "2rem 0rem 2rem 0rem",
@@ -38,7 +39,7 @@ export const programPhasesSectionStyles = makeStyles((theme) => ({
   underline: {
     width: "300px",
     height: "4px",
-    backgroundColor: "#d02d5a",
+    backgroundColor: "#6C1A93",
   },
   timeLineCardList: {
     listStylePosition: "inside",

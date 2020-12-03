@@ -11,14 +11,14 @@ const About = () => {
         <Container
           className={classes.dataContainer}
           component={Paper}
-          elevation={4}
+          elevation={8}
           maxWidth="lg"
         >
           <Grid container>
             <Grid className={classes.titleContainer} item xs={12} sm={12}>
               <h1
                 className={`${classes.basicText} ${classes.headerHeading}`}
-                style={{ color: "#d02d5a" }}
+                style={{ color: "#6C1A93" }}
               >
                 About The Program
               </h1>
@@ -68,7 +68,6 @@ const About = () => {
           </Grid>
         </Container>
       </div>
-      <div className={classes.shapeContainer}></div>
     </React.Fragment>
   );
 };

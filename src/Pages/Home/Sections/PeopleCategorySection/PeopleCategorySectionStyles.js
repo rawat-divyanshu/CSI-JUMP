@@ -33,7 +33,7 @@ export const peopleCategorySectionStyles = makeStyles((theme) => ({
   underline: {
     width: "300px",
     height: "4px",
-    backgroundColor: "#d02d5a",
+    backgroundColor: "#6C1A93",
   },
   cardContent: {
     display: "flex",

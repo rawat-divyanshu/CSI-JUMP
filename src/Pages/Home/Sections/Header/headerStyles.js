@@ -1,13 +1,19 @@
 import { makeStyles } from "@material-ui/core/styles";
+import Bg from "../../../../Assets/images/header-bg.png";
 
 export const headerStyles = makeStyles((theme) => ({
-  mainContainer: {
-    minHeight: "100vh",
+  wrapperContainer: {
+    background: `url(${Bg})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    [theme.breakpoints.down("sm")]: {
+      backgroundPosition: "right",
+    },
   },
   headerContainer: {
-    padding: "4rem 4rem 2rem 4rem",
+    padding: "12rem 4rem 2rem 4rem",
     [theme.breakpoints.down("sm")]: {
-      padding: "0rem 0.5rem 0rem 0.5rem",
+      padding: "5rem 0.5rem 0rem 0.5rem",
     },
   },
   logoContainer: {
@@ -15,9 +21,6 @@ export const headerStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-around",
-  },
-  headerWrapper: {
-    backgroundColor: "#d02d5a",
   },
   basicText: {
     color: "#ffffff",
