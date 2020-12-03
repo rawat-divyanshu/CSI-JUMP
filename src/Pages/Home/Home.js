@@ -4,6 +4,7 @@ import Header from "./Sections/Header/Header";
 import About from "./Sections/About/About";
 import PeopleCategorySection from "./Sections/PeopleCategorySection/PeopleCategorySection";
 import ProgramPhasesSection from "./Sections/ProgramPhasesSection/ProgramPhasesSection";
+import LearningStacksSection from "./Sections/LearningStacksSection/LearningStacksSection";
 
 const Home = () => {
   const classes = homeStyles();
@@ -20,6 +21,9 @@ const Home = () => {
 
       {/* Program Phases Section */}
       <ProgramPhasesSection />
+
+      {/* Learning Stacks Section */}
+      <LearningStacksSection />
     </div>
   );
 };
