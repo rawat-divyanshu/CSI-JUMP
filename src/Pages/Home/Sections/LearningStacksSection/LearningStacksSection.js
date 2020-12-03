@@ -22,7 +22,7 @@ import { useMediaQuery } from "@material-ui/core/";
 const LearningStacksSection = () => {
   const classes = learningStacksSectionStyles();
   const theme = useTheme();
-  const smMatch = useMediaQuery(theme.breakpoints.down("sm"));
+  const mdMatch = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <div className={classes.wrapperContainer}>
       <Container maxWidth="lg">
@@ -40,7 +40,7 @@ const LearningStacksSection = () => {
           you a guided learning path.
         </p>
         <Grid container spacing={4}>
-          <Grid item xs={12} sm={12} md={4} lg={4}>
+          <Grid item xs={12} sm={6} md={6} lg={4}>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
@@ -66,7 +66,7 @@ const LearningStacksSection = () => {
               </CardActionArea>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={12} md={4} lg={4}>
+          <Grid item xs={12} sm={6} md={6} lg={4}>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
@@ -91,7 +91,7 @@ const LearningStacksSection = () => {
               </CardActionArea>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={12} md={4} lg={4}>
+          <Grid item xs={12} sm={6} md={6} lg={4}>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
@@ -117,7 +117,7 @@ const LearningStacksSection = () => {
               </CardActionArea>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={12} md={4} lg={4}>
+          <Grid item xs={12} sm={6} md={6} lg={4}>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
@@ -143,7 +143,7 @@ const LearningStacksSection = () => {
               </CardActionArea>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={12} md={4} lg={4}>
+          <Grid item xs={12} sm={6} md={6} lg={4}>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
@@ -169,7 +169,7 @@ const LearningStacksSection = () => {
               </CardActionArea>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={12} md={4} lg={4}>
+          <Grid item xs={12} sm={6} md={6} lg={4}>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
@@ -196,14 +196,14 @@ const LearningStacksSection = () => {
             </Card>
           </Grid>
           <Grid
-            style={{ display: smMatch ? "none" : "block" }}
+            style={{ display: mdMatch ? "none" : "block" }}
             item
             xs={0}
             sm={0}
-            md={4}
+            md={6}
             lg={4}
           />
-          <Grid item xs={12} sm={12} md={4} lg={4}>
+          <Grid item xs={12} sm={6} md={6} lg={4}>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
@@ -229,11 +229,11 @@ const LearningStacksSection = () => {
             </Card>
           </Grid>
           <Grid
-            style={{ display: smMatch ? "none" : "block" }}
+            style={{ display: mdMatch ? "none" : "block" }}
             item
             xs={0}
             sm={0}
-            md={4}
+            md={6}
             lg={4}
           />
         </Grid>
