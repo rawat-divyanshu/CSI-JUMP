@@ -14,6 +14,8 @@ import BackEndStackImg from "../../../../Assets/images/backendstackimg.jpg";
 import MLStackImg from "../../../../Assets/images/mlstackimg.jpg";
 import DSStackImg from "../../../../Assets/images/dsstackimg.jpg";
 import CPStackImg from "../../../../Assets/images/cpstackimg.png";
+import GameDevStackImg from "../../../../Assets/images/gamedevstackimg.png";
+import FlutterStackImg from "../../../../Assets/images/flutterstackimg.jpg";
 
 const LearningStacksSection = () => {
   const classes = learningStacksSectionStyles();
@@ -168,7 +170,7 @@ const LearningStacksSection = () => {
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image="https://dashbouquet.com/static/020b2d58fcc9ac999513a862aa01314c/d47f1/flutter-app-development-post.jpg"
+                  image={FlutterStackImg}
                   style={{ height: 200 }}
                 />
                 <CardContent>
@@ -184,6 +186,31 @@ const LearningStacksSection = () => {
                     created by Google. It is used to develop applications for
                     Android, iOS, Linux, Mac, Windows, Google Fuchsia, and the
                     web from a single codebase.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={12} md={4} lg={4}>
+            <Card className={classes.root}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image={GameDevStackImg}
+                  style={{ height: 200 }}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Game Development
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Game Development is the art of creating games and describes
+                    the design, development and release of a game. It may
+                    involve concept generation, design, build, test and release.
                   </Typography>
                 </CardContent>
               </CardActionArea>
