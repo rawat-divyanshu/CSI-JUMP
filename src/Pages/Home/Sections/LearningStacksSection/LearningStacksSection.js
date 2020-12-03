@@ -16,9 +16,13 @@ import DSStackImg from "../../../../Assets/images/dsstackimg.jpg";
 import CPStackImg from "../../../../Assets/images/cpstackimg.png";
 import GameDevStackImg from "../../../../Assets/images/gamedevstackimg.png";
 import FlutterStackImg from "../../../../Assets/images/flutterstackimg.jpg";
+import { useTheme } from "@material-ui/core/styles";
+import { useMediaQuery } from "@material-ui/core/";
 
 const LearningStacksSection = () => {
   const classes = learningStacksSectionStyles();
+  const theme = useTheme();
+  const smMatch = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <div className={classes.wrapperContainer}>
       <Container maxWidth="lg">
@@ -191,7 +195,14 @@ const LearningStacksSection = () => {
               </CardActionArea>
             </Card>
           </Grid>
-          <Grid item xs={0} sm={0} md={4} lg={4} />
+          <Grid
+            style={{ display: smMatch ? "none" : "block" }}
+            item
+            xs={0}
+            sm={0}
+            md={4}
+            lg={4}
+          />
           <Grid item xs={12} sm={12} md={4} lg={4}>
             <Card className={classes.root}>
               <CardActionArea>
@@ -217,7 +228,14 @@ const LearningStacksSection = () => {
               </CardActionArea>
             </Card>
           </Grid>
-          <Grid item xs={0} sm={0} md={4} lg={4} />
+          <Grid
+            style={{ display: smMatch ? "none" : "block" }}
+            item
+            xs={0}
+            sm={0}
+            md={4}
+            lg={4}
+          />
         </Grid>
       </Container>
     </div>
