@@ -1,5 +1,8 @@
 import { makeStyles } from "@material-ui/core/styles";
 import Bg from "../../../../Assets/images/bg-1.png";
+import Wave from "../../../../Assets/images/wave-1.svg";
+import smWave from "../../../../Assets/images/Wave-1-sm.svg";
+import xsWave from "../../../../Assets/images/wave-1-xs.svg";
 
 export const learningStacksSectionStyles = makeStyles((theme) => ({
   wrapperContainer: {
@@ -47,5 +50,18 @@ export const learningStacksSectionStyles = makeStyles((theme) => ({
     fontFamily: "Fira Sans",
     marginBottom: "1.5rem",
     textAlign: "center",
+  },
+  shapeContainer: {
+    height: 100,
+    background: `url(${Wave})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center top",
+    [theme.breakpoints.down("xs")]: {
+      background: `url(${xsWave})`,
+    },
+    [theme.breakpoints.down("sm")]: {
+      background: `url(${smWave})`,
+    },
   },
 }));
