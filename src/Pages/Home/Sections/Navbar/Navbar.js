@@ -42,12 +42,10 @@ const Navbar = (props) => {
           <div className={classes.navDivider} />
           <div className={classes.navMenu}>
             <h4 className={classes.navMenuItem}>Home</h4>
-            <h4 className={classes.navMenuItem}>About Program</h4>
-            <h4 className={classes.navMenuItem}>Learning Stacks</h4>
-            <h4 className={classes.navMenuItem}>Program Motto</h4>
-            <h4 className={classes.navMenuItem}>Mentors</h4>
-            <h4 className={classes.navMenuItem}>Program Managers</h4>
-            <h4 className={classes.navMenuItem}>FAQs</h4>
+            <h4 className={classes.navMenuItem}>Events</h4>
+            <h4 className={classes.navMenuItem}>Gallery</h4>
+            <h4 className={classes.navMenuItem}>Our Team</h4>
+            <h4 className={classes.navMenuItem}>Contact Us</h4>
           </div>
         </Toolbar>
       </AppBar>

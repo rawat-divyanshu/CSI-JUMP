@@ -7,6 +7,7 @@ import ProgramPhasesSection from "./Sections/ProgramPhasesSection/ProgramPhasesS
 import LearningStacksSection from "./Sections/LearningStacksSection/LearningStacksSection";
 import Navbar from "./Sections/Navbar/Navbar";
 import ProgramMotto from "./Sections/ProgramMotto/ProgramMotto";
+import QNASection from "./Sections/QNASection/QNASection";
 
 const Home = () => {
   const classes = homeStyles();
@@ -32,6 +33,9 @@ const Home = () => {
 
       {/* Program Motto Section */}
       <ProgramMotto />
+
+      {/* QNA Section */}
+      <QNASection />
     </div>
   );
 };
