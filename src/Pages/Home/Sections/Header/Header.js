@@ -8,7 +8,7 @@ const Header = () => {
   const classes = headerStyles();
   return (
     <div className={classes.wrapperContainer}>
-      <div className={classes.mainContainer} style={{ height: "70vh" }}>
+      <div className={classes.mainContainer} style={{ height: "500px" }}>
         <Grid className={classes.headerContainer} container>
           <Grid
             className={classes.logoContainer}

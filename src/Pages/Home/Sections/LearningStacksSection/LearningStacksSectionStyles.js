@@ -23,10 +23,10 @@ export const learningStacksSectionStyles = makeStyles((theme) => ({
     fontSize: "3rem",
     textAlign: "center",
     [theme.breakpoints.down("sm")]: {
-      fontSize: "2rem",
+      fontSize: "2.5rem",
     },
     [theme.breakpoints.down("xs")]: {
-      fontSize: "1.8rem",
+      fontSize: "2.5rem",
     },
   },
   titleContainer: {

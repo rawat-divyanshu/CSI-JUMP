@@ -6,6 +6,7 @@ import PeopleCategorySection from "./Sections/PeopleCategorySection/PeopleCatego
 import ProgramPhasesSection from "./Sections/ProgramPhasesSection/ProgramPhasesSection";
 import LearningStacksSection from "./Sections/LearningStacksSection/LearningStacksSection";
 import Navbar from "./Sections/Navbar/Navbar";
+import ProgramMotto from "./Sections/ProgramMotto/ProgramMotto";
 
 const Home = () => {
   const classes = homeStyles();
@@ -28,6 +29,9 @@ const Home = () => {
 
       {/* Learning Stacks Section */}
       <LearningStacksSection />
+
+      {/* Program Motto Section */}
+      <ProgramMotto />
     </div>
   );
 };
