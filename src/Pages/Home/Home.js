@@ -8,6 +8,7 @@ import LearningStacksSection from "./Sections/LearningStacksSection/LearningStac
 import Navbar from "./Sections/Navbar/Navbar";
 import ProgramMotto from "./Sections/ProgramMotto/ProgramMotto";
 import QNASection from "./Sections/QNASection/QNASection";
+import Footer from "./Sections/Footer/Footer";
 
 const Home = () => {
   const classes = homeStyles();
@@ -36,6 +37,9 @@ const Home = () => {
 
       {/* QNA Section */}
       <QNASection />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

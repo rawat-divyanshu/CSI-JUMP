@@ -4,6 +4,10 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import { NavbarStyles } from "./NavbarStyles";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
+import { useTheme } from "@material-ui/core/styles";
+import { useMediaQuery } from "@material-ui/core";
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -25,6 +29,10 @@ ElevationScroll.propTypes = {
 
 const Navbar = (props) => {
   const classes = NavbarStyles();
+
+  const theme = useTheme();
+  const smMatch = useMediaQuery(theme.breakpoints.down("sm"));
+
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: props.threshold,
@@ -47,6 +55,14 @@ const Navbar = (props) => {
             <h4 className={classes.navMenuItem}>Our Team</h4>
             <h4 className={classes.navMenuItem}>Contact Us</h4>
           </div>
+
+          {smMatch && (
+            <div className={classes.mobileDrawer}>
+              <IconButton>
+                <MenuIcon fontSize="large" style={{ color: "#ffffff" }} />
+              </IconButton>
+            </div>
+          )}
         </Toolbar>
       </AppBar>
     </ElevationScroll>

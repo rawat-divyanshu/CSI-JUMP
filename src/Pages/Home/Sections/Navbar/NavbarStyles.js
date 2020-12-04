@@ -19,7 +19,7 @@ export const NavbarStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyItems: "space-between",
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down("sm")]: {
       display: "none",
     },
   },
