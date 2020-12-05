@@ -33,7 +33,8 @@ const Header = () => {
             lg={9}
           >
             <h1 className={`${classes.basicText} ${classes.headerHeading}`}>
-              Computer Society of India <br /> Jaipur Chapter - BIT Jaipur
+              Computer Society of India - Student Chapter <br /> BIT Mesra -
+              Jaipur Campus
             </h1>
             <h3
               className={classes.basicText}
