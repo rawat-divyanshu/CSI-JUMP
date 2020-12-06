@@ -8,6 +8,13 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import { useTheme } from "@material-ui/core/styles";
 import { useMediaQuery } from "@material-ui/core";
+import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import InboxIcon from "@material-ui/icons/MoveToInbox";
+import { navItems } from "./../../../../data";
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -38,6 +45,20 @@ const Navbar = (props) => {
     threshold: props.threshold,
     target: props.window ? window() : undefined,
   });
+
+  const [open, setOpen] = React.useState(false);
+
+  const toggleDrawer = (event) => {
+    if (
+      event &&
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setOpen(!open);
+  };
   return (
     <ElevationScroll {...props}>
       <AppBar
@@ -49,18 +70,40 @@ const Navbar = (props) => {
           <h4 className={classes.navTitle}>CSI - BITJ</h4>
           <div className={classes.navDivider} />
           <div className={classes.navMenu}>
-            <h4 className={classes.navMenuItem}>Home</h4>
-            <h4 className={classes.navMenuItem}>Events</h4>
-            <h4 className={classes.navMenuItem}>Gallery</h4>
-            <h4 className={classes.navMenuItem}>Our Team</h4>
-            <h4 className={classes.navMenuItem}>Contact Us</h4>
+            {navItems.map((navItem) => (
+              <h4 className={classes.navMenuItem}>{navItem.title}</h4>
+            ))}
           </div>
 
           {smMatch && (
             <div className={classes.mobileDrawer}>
-              <IconButton>
+              <IconButton onClick={toggleDrawer}>
                 <MenuIcon fontSize="large" style={{ color: "#ffffff" }} />
               </IconButton>
+              <SwipeableDrawer
+                anchor="right"
+                open={open}
+                onClose={toggleDrawer}
+                onOpen={toggleDrawer}
+              >
+                <div
+                  className={classes.list}
+                  role="presentation"
+                  onClick={toggleDrawer}
+                  onKeyDown={toggleDrawer}
+                >
+                  <List>
+                    {navItems.map((navItem) => (
+                      <ListItem button key={navItem}>
+                        <ListItemIcon>
+                          <InboxIcon />
+                        </ListItemIcon>
+                        <ListItemText primary={navItem.title} />
+                      </ListItem>
+                    ))}
+                  </List>
+                </div>
+              </SwipeableDrawer>
             </div>
           )}
         </Toolbar>

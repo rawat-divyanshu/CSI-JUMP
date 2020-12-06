@@ -29,4 +29,7 @@ export const NavbarStyles = makeStyles((theme) => ({
     fontFamily: "Fira Sans",
     fontSize: "1.2rem",
   },
+  list: {
+    width: 250,
+  },
 }));

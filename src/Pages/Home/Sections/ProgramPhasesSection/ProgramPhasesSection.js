@@ -52,7 +52,7 @@ const ProgramPhasesSection = () => {
                     {smMatch ? (
                       <Avatar alt="firstName lastName" src={One} />
                     ) : (
-                      <img src={One} />
+                      <img alt="oneimg" src={One} />
                     )}
                   </TimelineDot>
                   <TimelineConnector />
@@ -85,7 +85,7 @@ const ProgramPhasesSection = () => {
                     {smMatch ? (
                       <Avatar alt="firstName lastName" src={Two} />
                     ) : (
-                      <img src={Two} />
+                      <img alt="img2" src={Two} />
                     )}
                   </TimelineDot>
                   <TimelineConnector />
@@ -119,7 +119,7 @@ const ProgramPhasesSection = () => {
                     {smMatch ? (
                       <Avatar alt="firstName lastName" src={Three} />
                     ) : (
-                      <img src={Three} />
+                      <img alt="img3" src={Three} />
                     )}
                   </TimelineDot>
                   <TimelineConnector className={classes.secondaryTail} />

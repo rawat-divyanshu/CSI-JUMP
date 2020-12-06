@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, AppBar, Grid, Paper } from "@material-ui/core";
+import { Container, Grid, Paper } from "@material-ui/core";
 import { aboutStyles } from "./AboutStyles";
 import Logo from "../../../../Assets/images/logo-jump.png";
 
@@ -25,7 +25,7 @@ const About = () => {
               <hr className={classes.underline} />
             </Grid>
             <Grid className={classes.upperLogo} item xs={12} sm={12}>
-              <img src={Logo} className={classes.logo} />
+              <img alt="logoimg" src={Logo} className={classes.logo} />
             </Grid>
             <Grid
               className={classes.dataText}
@@ -63,7 +63,7 @@ const About = () => {
               md={4}
               lg={4}
             >
-              <img src={Logo} className={classes.logo} />
+              <img alt="logoimg" src={Logo} className={classes.logo} />
             </Grid>
           </Grid>
         </Container>

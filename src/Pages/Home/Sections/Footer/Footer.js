@@ -20,7 +20,7 @@ const Footer = () => {
                   sm={6}
                   md={2}
                 >
-                  <img src={CSILogo} className={classes.logo} />
+                  <img alt="csilogo" src={CSILogo} className={classes.logo} />
                 </Grid>
                 <Grid item xs={12} sm={6} md={5}>
                   <h1 className={classes.logoTitle}>
@@ -31,10 +31,11 @@ const Footer = () => {
                 </Grid>
                 <Grid item xs={12} sm={12} md={5}>
                   <p className={classes.logoSubTitle}>
-                    Computer Society Of India, Student Chapter - BIT Mesra, Jaipur Campus aims
-                    to develop a community of self - focused and aware
-                    individuals inside Campus, working and learning together to
-                    improve themselves along with whosoever comes in the way.
+                    Computer Society Of India, Student Chapter - BIT Mesra,
+                    Jaipur Campus aims to develop a community of self - focused
+                    and aware individuals inside Campus, working and learning
+                    together to improve themselves along with whosoever comes in
+                    the way.
                   </p>
                 </Grid>
                 <Grid

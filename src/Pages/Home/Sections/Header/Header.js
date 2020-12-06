@@ -18,7 +18,7 @@ const Header = () => {
             md={3}
             lg={3}
           >
-            <img src={Logo} className={classes.logo} />
+            <img alt="logoimg" src={Logo} className={classes.logo} />
           </Grid>
           <Grid
             style={{
