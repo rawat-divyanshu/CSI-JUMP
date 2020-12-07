@@ -9,10 +9,14 @@ import {
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import QueIcon from "../../../../Assets/images/que-icon.png";
 import AnsIcon from "../../../../Assets/images/ans-icon.png";
+import { Slide } from 'react-awesome-reveal';
+
 
 const QNAAccordion = ({ qna }) => {
   const classes = qnaSectionStyles();
   return (
+    <Slide triggerOnce>
+
     <Accordion>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         <Grid container className={classes.qnaContainer}>
@@ -39,6 +43,7 @@ const QNAAccordion = ({ qna }) => {
         </Grid>
       </AccordionDetails>
     </Accordion>
+    </Slide>
   );
 };
 

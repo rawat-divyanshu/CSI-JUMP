@@ -9,6 +9,8 @@ import Navbar from "./Sections/Navbar/Navbar";
 import ProgramMotto from "./Sections/ProgramMotto/ProgramMotto";
 import QNASection from "./Sections/QNASection/QNASection";
 import Footer from "./Sections/Footer/Footer";
+import { Fade } from "react-awesome-reveal";
+
 
 const Home = () => {
   const classes = homeStyles();
@@ -21,22 +23,36 @@ const Home = () => {
       <Header />
 
       {/* About */}
+      <Fade triggerOnce>
       <About />
+      </Fade>
 
       {/* Selected People Section */}
+      <Fade triggerOnce>
       <PeopleCategorySection />
+      </Fade>
 
       {/* Program Phases Section */}
+      <Fade triggerOnce>
       <ProgramPhasesSection />
+      </Fade>
 
       {/* Learning Stacks Section */}
+      <Fade triggerOnce>
       <LearningStacksSection />
+      </Fade>
 
       {/* Program Motto Section */}
+      <Fade triggerOnce>
+
       <ProgramMotto />
+      </Fade>
 
       {/* QNA Section */}
+      <Fade triggerOnce>
+
       <QNASection />
+      </Fade>
 
       {/* Footer */}
       <Footer />

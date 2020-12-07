@@ -3,10 +3,13 @@ import { programMottoStyles } from "./ProgramMottoStyles";
 import { Grid, Paper } from "@material-ui/core";
 import { Avatar } from "@material-ui/core";
 import AimLogo from "../../../../Assets/images/aim-logo.png";
+import { Slide } from 'react-awesome-reveal';
+
 
 const ProgramMottoCard = ({ programMotto }) => {
   const classes = programMottoStyles();
   return (
+    <Slide triggerOnce>
     <Grid
       component={Paper}
       elevation={6}
@@ -28,6 +31,7 @@ const ProgramMottoCard = ({ programMotto }) => {
         <img alt="cardimg" className={classes.cardImg} src={programMotto.img} />
       </Grid>
     </Grid>
+    </Slide>
   );
 };
 

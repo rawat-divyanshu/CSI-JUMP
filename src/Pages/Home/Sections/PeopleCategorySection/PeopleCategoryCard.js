@@ -1,10 +1,12 @@
 import React from "react";
 import { peopleCategorySectionStyles } from "./PeopleCategorySectionStyles";
 import { Card, CardActionArea, CardContent } from "@material-ui/core";
+import { Slide } from 'react-awesome-reveal';
 
 const PeopleCategoryCard = ({ categoryData }) => {
   const classes = peopleCategorySectionStyles();
   return (
+    <Slide triggerOnce>
     <Card className={classes.card}>
       <CardActionArea>
         <CardContent className={classes.cardContent}>
@@ -18,6 +20,7 @@ const PeopleCategoryCard = ({ categoryData }) => {
         </CardContent>
       </CardActionArea>
     </Card>
+    </Slide>
   );
 };
 
