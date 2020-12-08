@@ -1,12 +1,12 @@
 import React from "react";
 import { ThemeProvider } from "@material-ui/core/styles";
-import Home from "./Pages/Home/Home";
 import { theme } from "./Theme";
+import Routes from "./Routes";
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Home />
+      <Routes />
     </ThemeProvider>
   );
 };

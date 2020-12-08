@@ -19,9 +19,9 @@ const ProgramMotto = () => {
           <hr className={classes.underline} />
         </div>
         <Grid container spacing={4}>
-          {programMottoDetails.map((programMotto) => (
+          {programMottoDetails.map((programMotto, idx) => (
             <Grid key={programMotto} item xs={12} sm={12}>
-              <ProgramMottoCard programMotto={programMotto} />
+              <ProgramMottoCard programMotto={programMotto} idx={idx} />
             </Grid>
           ))}
         </Grid>
