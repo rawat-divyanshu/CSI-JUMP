@@ -7,7 +7,7 @@ import { NavbarStyles } from "./NavbarStyles";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import { useTheme } from "@material-ui/core/styles";
-import { useMediaQuery, Button } from "@material-ui/core";
+import { useMediaQuery } from "@material-ui/core";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -70,17 +70,16 @@ const Navbar = (props) => {
           <div className={classes.navDivider} />
           <div className={classes.navMenu}>
             {navItems.map((navItem, idx) => (
-              <Button
+              <Link
                 className={
                   idx === 0
                     ? `${classes.navMenuItem} ${classes.activeLink}`
                     : classes.navMenuItem
                 }
-                component={Link}
                 to={navItem.link}
               >
                 {navItem.title}
-              </Button>
+              </Link>
             ))}
           </div>
 
