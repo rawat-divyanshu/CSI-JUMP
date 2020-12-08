@@ -7,14 +7,13 @@ import { NavbarStyles } from "./NavbarStyles";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import { useTheme } from "@material-ui/core/styles";
-import { useMediaQuery } from "@material-ui/core";
+import { useMediaQuery, Button } from "@material-ui/core";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
 import { navItems } from "./../../../../data";
+import { Link } from "react-router-dom";
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -70,8 +69,18 @@ const Navbar = (props) => {
           <h4 className={classes.navTitle}>CSI - BITJ</h4>
           <div className={classes.navDivider} />
           <div className={classes.navMenu}>
-            {navItems.map((navItem) => (
-              <h4 className={classes.navMenuItem}>{navItem.title}</h4>
+            {navItems.map((navItem, idx) => (
+              <Button
+                className={
+                  idx === 0
+                    ? `${classes.navMenuItem} ${classes.activeLink}`
+                    : classes.navMenuItem
+                }
+                component={Link}
+                to={navItem.link}
+              >
+                {navItem.title}
+              </Button>
             ))}
           </div>
 
@@ -92,13 +101,24 @@ const Navbar = (props) => {
                   onClick={toggleDrawer}
                   onKeyDown={toggleDrawer}
                 >
-                  <List>
-                    {navItems.map((navItem) => (
-                      <ListItem button key={navItem}>
-                        <ListItemIcon>
-                          <InboxIcon />
-                        </ListItemIcon>
-                        <ListItemText primary={navItem.title} />
+                  <List className={classes.drawerList}>
+                    {navItems.map((navItem, idx) => (
+                      <ListItem
+                        className={classes.drawerListItem}
+                        button
+                        key={navItem}
+                        component={Link}
+                        to={navItem.link}
+                      >
+                        <ListItemText
+                          className={
+                            idx === 0
+                              ? `${classes.drawerListText} ${classes.activeLink}`
+                              : classes.drawerListText
+                          }
+                          primary={navItem.title}
+                          disableTypography
+                        />
                       </ListItem>
                     ))}
                   </List>

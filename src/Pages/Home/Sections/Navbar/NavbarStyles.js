@@ -31,5 +31,25 @@ export const NavbarStyles = makeStyles((theme) => ({
   },
   list: {
     width: 250,
+    height: "100%",
+    backgroundColor: "#6C1A93",
+  },
+  drawerList: {
+    padding: "2rem 1rem 2rem 1rem",
+  },
+  drawerListText: {
+    color: "#ffffff",
+    textAlign: "center",
+    fontFamily: "Fira Sans",
+    fontSize: "1.5rem",
+    fontWeight: 600,
+    marginBottom: "0.5rem",
+  },
+  drawerListItem: {
+    borderBottom: "1px solid #ffffff",
+    marginBottom: "1rem",
+  },
+  activeLink: {
+    color: "#ff8c00",
   },
 }));
