@@ -28,6 +28,7 @@ export const NavbarStyles = makeStyles((theme) => ({
     color: "#ffffff",
     fontFamily: "Fira Sans",
     fontSize: "1.2rem",
+    textDecoration: "none",
   },
   list: {
     width: 250,

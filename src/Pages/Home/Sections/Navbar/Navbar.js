@@ -100,27 +100,29 @@ const Navbar = (props) => {
                   onClick={toggleDrawer}
                   onKeyDown={toggleDrawer}
                 >
-                  <List className={classes.drawerList}>
-                    {navItems.map((navItem, idx) => (
-                      <ListItem
-                        className={classes.drawerListItem}
-                        button
-                        key={navItem}
-                        component={Link}
-                        to={navItem.link}
-                      >
-                        <ListItemText
-                          className={
-                            idx === 0
-                              ? `${classes.drawerListText} ${classes.activeLink}`
-                              : classes.drawerListText
-                          }
-                          primary={navItem.title}
-                          disableTypography
-                        />
-                      </ListItem>
-                    ))}
-                  </List>
+                  <div className={classes.drawerList}>
+                    <List>
+                      {navItems.map((navItem, idx) => (
+                        <ListItem
+                          className={classes.drawerListItem}
+                          button
+                          key={navItem}
+                          component={Link}
+                          to={navItem.link}
+                        >
+                          <ListItemText
+                            className={
+                              idx === 0
+                                ? `${classes.drawerListText} ${classes.activeLink}`
+                                : classes.drawerListText
+                            }
+                            primary={navItem.title}
+                            disableTypography
+                          />
+                        </ListItem>
+                      ))}
+                    </List>
+                  </div>
                 </div>
               </SwipeableDrawer>
             </div>
