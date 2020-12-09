@@ -24,33 +24,41 @@ const ContactForm = () => {
             />
           </Grid>
           <Grid className={classes.formCard} item xs={12} sm={6}>
-            <TextField
-              className={classes.formInput}
-              label="Full Name"
-              variant="outlined"
-              fullWidth
-            />
-            <TextField
-              className={classes.formInput}
-              label="Email ID"
-              variant="outlined"
-              fullWidth
-            />
-            <TextField
-              className={classes.formInput}
-              label="Enter Your Message"
-              multiline
-              rows={5}
-              variant="outlined"
-              fullWidth
-            />
-            <Button
-              className={classes.formBtn}
-              variant="contained"
-              color="primary"
-            >
-              Send Message
-            </Button>
+            <div className={classes.formInput}>
+              <TextField
+                className={classes.formInput}
+                label="Full Name"
+                variant="outlined"
+                fullWidth
+              />
+            </div>
+            <div className={classes.formInput}>
+              <TextField
+                className={classes.formInput}
+                label="Email ID"
+                variant="outlined"
+                fullWidth
+              />
+            </div>
+            <div className={classes.formInput}>
+              <TextField
+                className={classes.formInput}
+                label="Enter Your Message"
+                multiline
+                rows={5}
+                variant="outlined"
+                fullWidth
+              />
+            </div>
+            <div className={classes.formBtn}>
+              <Button
+                className={classes.formBtn}
+                variant="contained"
+                color="primary"
+              >
+                Send Message
+              </Button>
+            </div>
           </Grid>
         </Grid>
       </Container>
