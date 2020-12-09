@@ -27,11 +27,11 @@ export const contactFormStyles = makeStyles((theme) => ({
     },
   },
   formInput: {
-    marginTop: "1rem",
+    marginTop: "2rem",
     fontFamily: "Fira Sans",
   },
   formBtn: {
-    marginTop: "1rem",
+    marginTop: "2rem",
     fontFamily: "Fira Sans",
   },
 }));
