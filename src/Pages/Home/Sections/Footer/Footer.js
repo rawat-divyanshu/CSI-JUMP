@@ -76,7 +76,13 @@ const Footer = () => {
             >
               Designed & Developed by :
               <br />
-              @Divyanshu Rawat (BTECH/25008/18)
+              <a
+                style={{ color: "#ffffff" }}
+                href="https://www.rawatdivyanshu.com/"
+                target="_blank"
+              >
+                Divyanshu Rawat (BTECH/25008/18) [Click to Follow]
+              </a>
             </Grid>
             <Grid
               style={{
