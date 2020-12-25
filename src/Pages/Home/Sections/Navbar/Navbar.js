@@ -15,22 +15,9 @@ import ListItemText from "@material-ui/core/ListItemText";
 import { navItems } from "./../../../../data";
 import { Link } from "react-router-dom";
 
-
-// import { useInView } from "react-intersection-observer";
-import { motion, useAnimation } from "framer-motion";
-
-
-
+import { motion } from "framer-motion";
 
 const NavAnimation = ({ children }) => {
-  // const controls = useAnimation();
-  // const [ref, inView] = useInView();
-
-  // React.useEffect(() => {
-  //   if (inView) {
-  //     controls.start("visible");
-  //   }
-  // }, [controls, inView]);
 
   return (
     <motion.div
