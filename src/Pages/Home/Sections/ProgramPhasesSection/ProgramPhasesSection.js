@@ -38,7 +38,7 @@ const LeftAnimation = ({ children }) => {
       initial="hidden"
       variants={{
         visible: { opacity: 1, x: 0 },
-        hidden: { opacity: 0, x: 100 },
+        hidden: { opacity: 0, x: 40},
       }}
       transition={{ duration: 1 }}
     >
@@ -67,7 +67,7 @@ const RightAnimation = ({ children }) => {
       initial="hidden"
       variants={{
         visible: { opacity: 1, x: 0 },
-        hidden: { opacity: 0, x: -100 },
+        hidden: { opacity: 0, x: -45 },
       }}
       transition={{ duration: 1 }}
     >
