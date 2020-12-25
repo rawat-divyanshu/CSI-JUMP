@@ -2,8 +2,23 @@ import React from "react";
 import { Container, Grid, Paper } from "@material-ui/core";
 import { aboutStyles } from "./AboutStyles";
 import Logo from "../../../../Assets/images/logo-jump.png";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
+
 
 const About = () => {
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  React.useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+
+
   const classes = aboutStyles();
   return (
     <React.Fragment>
@@ -14,6 +29,18 @@ const About = () => {
           elevation={8}
           maxWidth="lg"
         >
+          <motion.div 
+    ref={ref}
+    animate={controls}
+    initial="hidden"
+    variants={{
+      visible: { opacity: 1,  scale:1},
+      hidden: { opacity: 0, scale:0.5 }
+    }}
+    transition={{duration: 0.5}}
+ 
+    
+    >
           <Grid container>
             <Grid className={classes.titleContainer} item xs={12} sm={12}>
               <h1
@@ -66,6 +93,7 @@ const About = () => {
               <img alt="logoimg" src={Logo} className={classes.logo} />
             </Grid>
           </Grid>
+          </motion.div>
         </Container>
       </div>
     </React.Fragment>

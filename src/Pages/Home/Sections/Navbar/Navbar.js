@@ -15,6 +15,34 @@ import ListItemText from "@material-ui/core/ListItemText";
 import { navItems } from "./../../../../data";
 import { Link } from "react-router-dom";
 
+
+// import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
+
+
+
+
+const NavAnimation = ({ children }) => {
+  // const controls = useAnimation();
+  // const [ref, inView] = useInView();
+
+  // React.useEffect(() => {
+  //   if (inView) {
+  //     controls.start("visible");
+  //   }
+  // }, [controls, inView]);
+
+  return (
+    <motion.div
+    whileHover={{ scale: 1.3 }}
+    whileTap={{ scale: 0.9 }}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+
 function ElevationScroll(props) {
   const { children, window } = props;
   const trigger = useScrollTrigger({
@@ -70,6 +98,7 @@ const Navbar = (props) => {
           <div className={classes.navDivider} />
           <div className={classes.navMenu}>
             {navItems.map((navItem, idx) => (
+              <NavAnimation>
               <Link
                 className={
                   idx === 0
@@ -80,6 +109,7 @@ const Navbar = (props) => {
               >
                 {navItem.title}
               </Link>
+              </NavAnimation>
             ))}
           </div>
 

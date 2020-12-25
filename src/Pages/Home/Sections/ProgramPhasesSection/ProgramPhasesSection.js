@@ -15,6 +15,69 @@ import One from "../../../../Assets/images/one-2.png";
 import Two from "../../../../Assets/images/two-2.png";
 import Three from "../../../../Assets/images/three-2.png";
 import Avatar from "@material-ui/core/Avatar";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
+
+
+
+
+const LeftAnimation = ({ children }) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  React.useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  return (
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={{
+        visible: { opacity: 1, x: 0 },
+        hidden: { opacity: 0, x: 300 },
+      }}
+      transition={{ duration: 1 }}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+
+
+
+const RightAnimation = ({ children }) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  React.useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  return (
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={{
+        visible: { opacity: 1, x: 0 },
+        hidden: { opacity: 0, x: -300 },
+      }}
+      transition={{ duration: 1 }}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+
+
 
 const ProgramPhasesSection = () => {
   const classes = programPhasesSectionStyles();
@@ -57,21 +120,24 @@ const ProgramPhasesSection = () => {
                   </TimelineDot>
                   <TimelineConnector />
                 </TimelineSeparator>
+
                 <TimelineContent>
-                  <Paper elevation={3} className={classes.timeLineCard}>
-                    <h3 className={classes.timeLineCardTitle}>Phase 1</h3>
-                    <ul className={classes.timeLineCardList}>
-                      <li className={classes.timeLineCardText}>
-                        In this phase, L1 Learners will go through all the
-                        basics for continuing further in the program.
-                      </li>
-                      <li className={classes.timeLineCardText}>
-                        In this phase, L2 Learners will select the specific
-                        field of their choice and will start working guided with
-                        the mentors.
-                      </li>
-                    </ul>
-                  </Paper>
+                  <LeftAnimation>
+                    <Paper elevation={3} className={classes.timeLineCard}>
+                      <h3 className={classes.timeLineCardTitle}>Phase 1</h3>
+                      <ul className={classes.timeLineCardList}>
+                        <li className={classes.timeLineCardText}>
+                          In this phase, L1 Learners will go through all the
+                          basics for continuing further in the program.
+                        </li>
+                        <li className={classes.timeLineCardText}>
+                          In this phase, L2 Learners will select the specific
+                          field of their choice and will start working guided
+                          with the mentors.
+                        </li>
+                      </ul>
+                    </Paper>
+                  </LeftAnimation>
                 </TimelineContent>
               </TimelineItem>
               <TimelineItem>
@@ -91,21 +157,23 @@ const ProgramPhasesSection = () => {
                   <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent>
-                  <Paper elevation={3} className={classes.timeLineCard}>
-                    <h3 className={classes.timeLineCardTitle}>Phase 2</h3>
-                    <ul className={classes.timeLineCardList}>
-                      <li className={classes.timeLineCardText}>
-                        In this phase, L1 Learners will pick their particular
-                        field of interest and will start learning and working in
-                        it, guided by L2 learners, a long with mentors.
-                      </li>
-                      <li className={classes.timeLineCardText}>
-                        In this phase, L2 Learners will continue their learnings
-                        same as of Phase 1, but alongside they'll also mentor L1
-                        Learners.
-                      </li>
-                    </ul>
-                  </Paper>
+                  <RightAnimation>
+                    <Paper elevation={3} className={classes.timeLineCard}>
+                      <h3 className={classes.timeLineCardTitle}>Phase 2</h3>
+                      <ul className={classes.timeLineCardList}>
+                        <li className={classes.timeLineCardText}>
+                          In this phase, L1 Learners will pick their particular
+                          field of interest and will start learning and working
+                          in it, guided by L2 learners, a long with mentors.
+                        </li>
+                        <li className={classes.timeLineCardText}>
+                          In this phase, L2 Learners will continue their
+                          learnings same as of Phase 1, but alongside they'll
+                          also mentor L1 Learners.
+                        </li>
+                      </ul>
+                    </Paper>
+                  </RightAnimation>
                 </TimelineContent>
               </TimelineItem>
               <TimelineItem>
@@ -125,21 +193,23 @@ const ProgramPhasesSection = () => {
                   <TimelineConnector className={classes.secondaryTail} />
                 </TimelineSeparator>
                 <TimelineContent>
-                  <Paper elevation={3} className={classes.timeLineCard}>
-                    <h3 className={classes.timeLineCardTitle}>
-                      Project Exhibition
-                    </h3>
-                    <ul className={classes.timeLineCardList}>
-                      <li className={classes.timeLineCardText}>
-                        Since all of this will be project based learning, so
-                        through the end of a year we'll have small a event
-                        either in BIT-J Techfest or an CSI individual event,
-                        where all the participants will get chance to show off
-                        their projects. And the best projects will be rewarded
-                        accordingly.
-                      </li>
-                    </ul>
-                  </Paper>
+                  <LeftAnimation>
+                    <Paper elevation={3} className={classes.timeLineCard}>
+                      <h3 className={classes.timeLineCardTitle}>
+                        Project Exhibition
+                      </h3>
+                      <ul className={classes.timeLineCardList}>
+                        <li className={classes.timeLineCardText}>
+                          Since all of this will be project based learning, so
+                          through the end of a year we'll have small a event
+                          either in BIT-J Techfest or an CSI individual event,
+                          where all the participants will get chance to show off
+                          their projects. And the best projects will be rewarded
+                          accordingly.
+                        </li>
+                      </ul>
+                    </Paper>
+                  </LeftAnimation>
                 </TimelineContent>
               </TimelineItem>
             </Timeline>
