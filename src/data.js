@@ -118,14 +118,14 @@ export const learningStackDetails = [
     title: "Mobile App Development using Flutter",
     desc:
       "Flutter is an open-source UI software development kit created by Google. It is used to develop applications for Android, iOS, Linux, Mac, Windows, Google Fuchsia, and the web from a single codebase.",
-    img: GameDevStackImg,
+    img: FlutterStackImg,
   },
   {
     id: 7,
     title: "Game Development",
     desc:
       "Game Development is the art of creating games and describes the design, development and release of a game. It may involve concept generation, design, build, test and release.",
-    img: FlutterStackImg,
+    img: GameDevStackImg,
   },
   {
     id: 8,
