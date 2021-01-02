@@ -74,15 +74,9 @@ const Footer = () => {
               xs={12}
               sm={12}
             >
-              Designed & Developed by :
+              Designed & Developed under :
               <br />
-              <a
-                style={{ color: "#ffffff" }}
-                href="https://www.rawatdivyanshu.com/"
-                target="_blank"
-              >
-                Divyanshu Rawat (BTECH/25008/18) [Click to Follow]
-              </a>
+                Open Source Initiative by BIT - Jaipur
             </Grid>
             <Grid
               style={{
