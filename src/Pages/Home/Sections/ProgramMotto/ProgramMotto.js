@@ -4,6 +4,8 @@ import { programMottoStyles } from "./ProgramMottoStyles";
 import { programMottoDetails } from "./../../../../data";
 import ProgramMottoCard from "./ProgramMottoCard";
 
+
+
 const ProgramMotto = () => {
   const classes = programMottoStyles();
   return (

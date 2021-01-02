@@ -14,6 +14,20 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import { navItems } from "./../../data";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+
+const NavAnimation = ({ children }) => {
+
+  return (
+    <motion.div
+    whileHover={{ scale: 1.3 }}
+    whileTap={{ scale: 0.9 }}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -70,6 +84,7 @@ const Navbar = (props) => {
           <div className={classes.navDivider} />
           <div className={classes.navMenu}>
             {navItems.map((navItem, idx) => (
+              <NavAnimation>
               <Link
                 className={
                   idx === props.idx
@@ -80,6 +95,7 @@ const Navbar = (props) => {
               >
                 {navItem.title}
               </Link>
+              </NavAnimation>
             ))}
           </div>
 
