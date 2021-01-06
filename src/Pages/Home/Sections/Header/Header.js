@@ -62,7 +62,7 @@ const Header = () => {
             lg={3}
           >
             <TextAnimation>
-            <img alt="logoimg" src={Logo} className={classes.logo} />
+            <img style={{marginLeft: "45px" }} alt="logoimg" src={Logo} className={classes.logo} />
             </TextAnimation>
           </Grid>
           <Grid
